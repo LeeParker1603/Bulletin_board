@@ -11,7 +11,7 @@ from drf_spectacular.views import (
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("users.urls")),
-    path('', include('ads.urls')),
+    path("", include("ads.urls")),
     # Документация OpenAPI / Swagger
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
