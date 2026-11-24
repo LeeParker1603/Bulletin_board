@@ -76,12 +76,12 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            mkdir -p /home/${{ secrets.SERVER_USER }}/sb1_bulletin_board
-            cd /home/${{ secrets.SERVER_USER }}/sb1_bulletin_board
+            mkdir -p /home/${{ secrets.SERVER_USER }}/Bulletin_board
+            cd /home/${{ secrets.SERVER_USER }}/Bulletin_board
 
             if [ ! -d ".git" ]; then
               rm -f .env
-              git clone https://github.com{{ github.repository }}.git .
+              git clone https://github.com/LeeParker1603/Bulletin_board .
               git checkout main
             else
               git fetch --all
