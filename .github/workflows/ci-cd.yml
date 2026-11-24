@@ -67,7 +67,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
     steps:
       - name: Deploy to Remote Server via SSH
         uses: appleboy/ssh-action@v1.0.3
@@ -82,11 +82,11 @@ jobs:
             if [ ! -d ".git" ]; then
               rm -f .env
               git clone https://github.com/LeeParker1603/Bulletin_board .
-              git checkout main
+              git checkout develop
             else
               git fetch --all
-              git checkout main
-              git reset --hard origin/main
+              git checkout develop
+              git reset --hard origin/develop
             fi
 
             cat << 'EOF' > .env
