@@ -55,6 +55,9 @@ coverage.xml
 *.py[cod]
 cover/
 
+*.sqlite3
+
+
 # Translations
 *.mo
 *.pot
