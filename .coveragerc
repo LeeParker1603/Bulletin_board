@@ -1,0 +1,10 @@
+[run]
+source = users,ads
+omit =
+    */migrations/*
+    */tests/*
+    manage.py
+    config/*
+
+[report]
+show_missing = True
